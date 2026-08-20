@@ -96,4 +96,509 @@
     background:var(--navy);padding:.3rem .6rem;border-radius:3px;letter-spacing:.05em;
     white-space:nowrap;
   }
-  .cat-head h2{font-size:1.55rem;font-weig
+  .cat-head h2{font-size:1.55rem;font-weight:700;color:var(--navy-deep);}
+  .cat-note{color:#5B6B85;font-size:.9rem;max-width:60ch;margin:-1.3rem 0 2rem;}
+
+  .grid{
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem;
+    margin-bottom:1rem;
+  }
+  .card{
+    background:var(--white);border:1px solid var(--line);border-radius:10px;
+    padding:1.4rem 1.4rem 1.5rem;display:flex;flex-direction:column;gap:.6rem;
+    transition:border-color .2s, transform .2s, box-shadow .2s;
+  }
+  .card:hover{
+    border-color:var(--teal);transform:translateY(-2px);
+    box-shadow:0 12px 28px -18px rgba(18,46,92,.35);
+  }
+  img.pic{
+    width:100%;height:132px;object-fit:contain;object-position:center;
+    background:var(--white);border-radius:6px;margin-bottom:.2rem;
+  }
+  .card .name{
+    font-family:'Poppins',sans-serif;font-weight:700;font-size:1.05rem;color:var(--navy-deep);
+  }
+  .card .name sup{font-size:.55em;}
+  .card .sub{
+    font-size:.82rem;color:var(--teal);font-weight:600;
+  }
+  .card ul{list-style:none;margin-top:.4rem;display:flex;flex-direction:column;gap:.4rem;}
+  .card li{
+    font-size:.85rem;color:#41506A;padding-left:1rem;position:relative;
+  }
+  .card li::before{
+    content:"";position:absolute;left:0;top:.5em;width:5px;height:5px;border-radius:50%;
+    background:var(--teal);
+  }
+  .card .spec{
+    margin-top:.5rem;padding-top:.6rem;border-top:1px dashed var(--line);
+    font-family:var(--mono);font-size:.74rem;color:#5B6B85;line-height:1.7;
+  }
+
+  .pack{
+    background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  }
+  .pack-inner{
+    max-width:1280px;margin:0 auto;padding:3.5rem 1.5rem;
+  }
+  .pack-inner > .eyebrow{color:var(--navy);}
+  .pack-inner h2{font-size:1.5rem;color:var(--navy-deep);max-width:38ch;margin-bottom:2rem;}
+  .pack-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
+  .pack-card{
+    background:var(--teal-soft);border-radius:10px;padding:1.3rem 1.4rem;
+    display:flex;flex-direction:column;gap:.5rem;
+  }
+  .pack-card .tag{font-family:var(--mono);font-size:.7rem;color:var(--navy);letter-spacing:.05em;text-transform:uppercase;}
+  .pack-card h3{font-size:1.02rem;color:var(--navy-deep);}
+  .pack-card p{font-size:.87rem;color:#3A4C68;}
+
+  footer{background:var(--navy-deep);color:rgba(255,255,255,.75);}
+  .footer-inner{
+    max-width:1280px;margin:0 auto;padding:3rem 1.5rem 2.2rem;
+    display:grid;grid-template-columns:1.2fr 1fr;gap:2rem;
+  }
+  .footer-inner h3{color:var(--white);font-size:1rem;margin-bottom:.6rem;}
+  .footer-inner p{font-size:.85rem;line-height:1.7;}
+  .footer-inner .brands{display:flex;gap:1.4rem;align-items:center;margin-bottom:1rem;font-family:'Poppins',sans-serif;font-weight:700;color:var(--white);}
+  .foot-bottom{
+    border-top:1px solid rgba(255,255,255,.08);
+    text-align:center;font-size:.76rem;color:rgba(255,255,255,.45);
+    padding:1.2rem 1.5rem;font-family:var(--mono);
+  }
+
+  @media (max-width:820px){
+    .hero-inner{grid-template-columns:1fr;}
+    nav.links{display:none;}
+    .footer-inner{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand"><span class="dot"></span>iBiomed <span style="opacity:.5;font-weight:500;">× Healthium</span></div>
+    <nav class="links">
+      <a href="#absorbibles">Absorbibles</a>
+      <a href="#no-absorbibles">No absorbibles</a>
+      <a href="#hernias">Hernias</a>
+      <a href="#hemostaticos">Hemostáticos</a>
+      <a href="#otros">Otros productos</a>
+      <a href="#envasado">Envasado</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Catálogo de producto — Healthium Medtech</div>
+      <h1>Soluciones de precisión para el cierre de heridas</h1>
+      <p class="lead">Suturas absorbibles y no absorbibles, mallas para hernia, hemostáticos y accesorios quirúrgicos, distribuidos en Guatemala por iBiomed.</p>
+    </div>
+    <div class="stat-panel">
+      <div class="stat"><div class="num">N.º 1</div><div class="cap">Productor independiente de consumibles quirúrgicos en India, y mayor fabricante de agujas no cautivas del mundo por volumen (año fiscal 2021)</div></div>
+      <div class="stat"><div class="num">1 de cada 5</div><div class="cap">Cirugías en el mundo usó sus productos, al 31 de marzo de 2021</div></div>
+      <div class="stat"><div class="num">80 países</div><div class="cap">Presencia comercial activa, en expansión continua</div></div>
+      <div class="stat"><div class="num">64+ patentes</div><div class="cap">Registradas en India y Estados Unidos, más solicitudes pendientes al 31 de julio de 2021</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="absorbibles">
+  <div class="cat-head"><span class="tag">Suturas</span><h2>Absorbibles</h2></div>
+  <div class="grid">
+
+    <div class="card">
+      <img class="pic" src="img/trusynth.jpg" alt="trusynth">
+      <div class="name">TRUSYNTH<sup>®</sup></div>
+      <div class="sub">Poliglactina recubierta 910</div>
+      <ul>
+        <li>Sutura sintética, absorbible, multifilamento, trenzada y compacta</li>
+        <li>Excelente resistencia a la tracción para una mejor manipulación</li>
+        <li>Nudo suave con excelente seguridad</li>
+        <li>Gran ayuda para el periodo crítico de cicatrización de la herida</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img class="pic" src="img/trusynth_fast.jpg" alt="trusynth_fast">
+      <div class="name">TRUSYNTH<sup>®</sup> FAST</div>
+      <div class="sub">Poliglactina recubierta, absorción rápida 910</div>
+      <ul>
+        <li>Absorción más rápida y predecible</li>
+        <li>Excelente deslizamiento y seguridad del nudo</li>
+        <li>Disminución del dolor y reanudación más rápida de la actividad normal</li>
+        <li>Incidencia mínima de rotura de la herida o material de sutura residual</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img class="pic" src="img/truglyde.jpg" alt="truglyde">
+      <div class="name">TRUGLYDE<sup>®</sup></div>
+      <div class="sub">Ácido poliglicólico trenzado y recubierto</div>
+      <ul>
+        <li>Sutura sintética, recubierta, trenzada y absorbible de ácido poliglicólico</li>
+        <li>El revestimiento lubricante reduce la fricción y facilita el paso por los tejidos</li>
+        <li>Excelente resistencia inicial a la tracción</li>
+        <li>Nudo de excelente seguridad</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img class="pic" src="img/truglyde_fast.jpg" alt="truglyde_fast">
+      <div class="name">TRUGLYDE<sup>®</sup> FAST</div>
+      <div class="sub">Ácido poliglicólico, recubierto, absorción rápida</div>
+      <ul>
+        <li>Sutura sintética, recubierta, trenzada, absorbible</li>
+        <li>Absorción más rápida y predecible; reduce el dolor y las molestias</li>
+        <li>Pensada para heridas de corta duración</li>
+        <li>No requiere retiro posterior de material de sutura</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img class="pic" src="img/monoglyde.jpg" alt="monoglyde">
+      <div class="name">MONOGLYDE<sup>®</sup></div>
+      <div class="sub">Monofilamento de poliglecaprona 25</div>
+      <ul>
+        <li>Cicatriz mínima y resultado estético</li>
+        <li>Importante resistencia inicial a la tracción</li>
+        <li>Absorción predecible</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img class="pic" src="img/trugut.jpg" alt="trugut">
+      <div class="name">TRUGUT<sup>®</sup></div>
+      <div class="sub">Catgut crómico y simple</div>
+      <ul>
+        <li>Sutura biológica, absorbible y monofilamento</li>
+        <li>No se deshilacha</li>
+        <li>Versión simple: rápida absorción · versión crómica: sales crómicas que retrasan la absorción</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img class="pic" src="img/pdsynth.jpg" alt="pdsynth">
+      <div class="name">PDSYNTH<sup>®</sup></div>
+      <div class="sub">Monofilamento de polidioxanona</div>
+      <ul>
+        <li>Sutura sintética, absorbible, monofilamento</li>
+        <li>Resistencia a la tracción ampliada</li>
+        <li>Paso suave a través del tejido</li>
+        <li>Absorción lenta y predecible</li>
+      </ul>
+      <div class="spec">También disponible en sutura de bucle, tamaños 1 y 0</div>
+    </div>
+
+    <div class="card">
+      <img class="pic" src="img/trubarb.jpg" alt="trubarb">
+      <div class="name">TRUBARB™</div>
+      <div class="sub">Tejido sin nudos de polidioxanona — dispositivo de cierre</div>
+      <ul>
+        <li>Tope triangular seguro y eficaz</li>
+        <li>Lengüeta helicoidal unidireccional de corte en ángulo simple</li>
+        <li>Aguja QNPL de clase mundial de la serie 300</li>
+      </ul>
+      <div class="spec">Disponible en paquete de 6</div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="no-absorbibles">
+  <div class="cat-head"><span class="tag">Suturas</span><h2>No absorbibles</h2></div>
+  <div class="grid">
+
+    <div class="card">
+      <img class="pic" src="img/trulene.jpg" alt="trulene">
+      <div class="name">TRULENE<sup>®</sup></div>
+      <div class="sub">Monofilamento de polipropileno</div>
+      <ul>
+        <li>Gran plasticidad: acomoda mejor el edema de la herida</li>
+        <li>Fácil de retirar, ideal para cierre subcuticular</li>
+        <li>No se adhiere a los tejidos; también usable como sutura intradérmica</li>
+        <li>Fácil visibilidad y recuperación</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img class="pic" src="img/trusilk.jpg" alt="trusilk">
+      <div class="name">TRUSILK<sup>®</sup></div>
+      <div class="sub">Seda trenzada negra</div>
+      <ul>
+        <li>Fibras naturales trenzadas de seda</li>
+        <li>Excelente manipulación</li>
+        <li>Nudo de alta seguridad</li>
+        <li>Habitual en zonas mucosas e intertriginosas por su suavidad y flexibilidad</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img class="pic" src="img/trulon.jpg" alt="trulon">
+      <div class="name">TRULON<sup>®</sup></div>
+      <div class="sub">Monofilamento de poliamida</div>
+      <ul>
+        <li>Sutura sintética, no absorbible, químicamente inerte</li>
+        <li>La más utilizada en cirugías cutáneas</li>
+        <li>Alta resistencia a la tracción y excelente elasticidad</li>
+        <li>Suave y no se deshilacha</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img class="pic" src="img/clini_fibre.jpg" alt="clini_fibre">
+      <div class="name">CLINI FIBRE<sup>®</sup></div>
+      <div class="sub">Polietileno de peso molecular ultra alto</div>
+      <ul>
+        <li>Resistencia superior a la tracción</li>
+        <li>Tacto suave, bajo coeficiente de rozamiento y estable en el cuerpo</li>
+        <li>Más fuerte que el acero; gran resistencia a la abrasión</li>
+      </ul>
+      <div class="spec">Disponible en tamaños 2-0 a 5</div>
+    </div>
+
+    <div class="card">
+      <img class="pic" src="img/trubond.jpg" alt="trubond">
+      <div class="name">TRUBOND<sup>®</sup></div>
+      <div class="sub">Poliéster trenzado y recubierto</div>
+      <ul>
+        <li>Sutura sintética, no absorbible, recubierta y trenzada</li>
+        <li>Alta resistencia a la tracción para mayor fiabilidad</li>
+        <li>Recubrimiento de silicona: deslizamiento suave del nudo</li>
+        <li>Disponible con y sin aguja</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img class="pic" src="img/trubond_tape.jpg" alt="trubond_tape">
+      <div class="name">TRUBOND<sup>®</sup> TAPE</div>
+      <div class="sub">Cinta de fibra de poliéster esterilizada</div>
+      <ul>
+        <li>Cinta plana de poliéster blanca (sin teñir)</li>
+        <li>Material inerte, no irritante, resistencia a la tracción predecible</li>
+        <li>Con aguja: cerclaje en cuello uterino incompetente</li>
+        <li>Sin aguja: retracción y fijación temporal de órganos durante cirugía</li>
+      </ul>
+      <div class="spec">Variantes TN 622 y T 621a</div>
+    </div>
+
+    <div class="card">
+      <img class="pic" src="img/trusteel.jpg" alt="trusteel">
+      <div class="name">TRUSTEEL™</div>
+      <div class="sub">Monofilamento de acero inoxidable 316 LVM</div>
+      <ul>
+        <li>Acero SS316LVM de primera calidad</li>
+        <li>Cierre de heridas abdominales, esternón y procedimientos ortopédicos</li>
+        <li>Sutura de retención en pacientes obesos, para sostener tejidos internos</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="hernias">
+  <div class="cat-head"><span class="tag">Soluciones</span><h2>Para hernias</h2></div>
+  <div class="grid">
+
+    <div class="card">
+      <img class="pic" src="img/trulene_mesh.jpg" alt="trulene_mesh">
+      <div class="name">TRULENE<sup>®</sup> MESH</div>
+      <div class="sub">Malla de polipropileno</div>
+      <ul>
+        <li>Malla preferida para cirugías de hernia: fuerte e inerte, mejor adaptación a los tejidos</li>
+        <li>Acelera la cicatrización y favorece la proliferación tisular</li>
+      </ul>
+      <div class="spec">
+        Estándar — espesor 0,65–0,75mm · poros 0,8–1,1mm · ruptura 78,4N/cm · 105–145g/m²<br>
+        Laparoscópica — espesor 0,55–0,65mm · poros 0,6–1,0mm · ruptura 68,6N/cm · 60–100g/m²
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="pic" src="img/trulene_macropore.jpg" alt="trulene_macropore">
+      <div class="name">TRULENE<sup>®</sup> MACROPORE MESH</div>
+      <div class="sub">Malla de polipropileno ligera y macroporosa</div>
+      <ul>
+        <li>Mayor tamaño de poro: mejora la proliferación de tejidos</li>
+        <li>Reduce cuerpo extraño, mejorando calidad de vida</li>
+        <li>Imita la fisiología de la pared abdominal</li>
+      </ul>
+      <div class="spec">Espesor 0,65–0,75mm · poros 2,0–3,5mm · ruptura 68,6N/cm · 40–70g/m²</div>
+    </div>
+
+    <div class="card">
+      <img class="pic" src="img/trulene_mesh_soft.jpg" alt="trulene_mesh_soft">
+      <div class="name">TRULENE<sup>®</sup> MESH SOFT</div>
+      <div class="sub">Malla de polipropileno ultraligera</div>
+      <ul>
+        <li>Hilos ultraligeros de calidad superior: minimizan la respuesta inflamatoria</li>
+        <li>Menos contracción, dolor postoperatorio e infección que las mallas más pesadas</li>
+        <li>Mayor elasticidad y flexibilidad en la recuperación de hernia inguinal</li>
+      </ul>
+      <div class="spec">Espesor 0,30–0,38mm · poros 1,1–1,8mm · ruptura 58,8N/cm · 25–35g/m²</div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="hemostaticos">
+  <div class="cat-head"><span class="tag">Productos</span><h2>Hemostáticos</h2></div>
+  <div class="grid">
+
+    <div class="card">
+      <img class="pic" src="img/clinicel.jpg" alt="clinicel">
+      <div class="name">CLINICEL<sup>®</sup></div>
+      <div class="sub">Celulosa regenerada oxidada — hemostato absorbible</div>
+      <ul>
+        <li>Doble ventaja: hemostasia y actividad antibacteriana</li>
+        <li>Características de manejo superiores</li>
+        <li>Hemostasia efectiva en poco tiempo</li>
+        <li>Origen vegetal, sin respuesta inmunitaria potencial</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img class="pic" src="img/truwax.jpg" alt="truwax">
+      <div class="name">TRUWAX<sup>®</sup></div>
+      <div class="sub">Cera estéril para huesos</div>
+      <ul>
+        <li>Suave, fácil de moldear y aplicar</li>
+        <li>Bioquímicamente inerte y poco absorbible</li>
+        <li>Esterilizado por radiación</li>
+        <li>Cirugías a corazón abierto, torácicas y ortopédicas</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img class="pic" src="img/abgel.jpg" alt="abgel">
+      <div class="name">ABGEL™</div>
+      <div class="sub">Esponja de gelatina absorbible USP</div>
+      <ul>
+        <li>Gelatina neutra altamente purificada, con capacidad hemostática</li>
+        <li>Controla la exudación de sangre en hemorragias de vasos pequeños</li>
+        <li>Se absorbe por completo en 4–5 semanas, sin residuos ni encapsulación</li>
+        <li>No tóxico, alérgico, inmunógeno ni pirógeno</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="otros">
+  <div class="cat-head"><span class="tag">Complementarios</span><h2>Otros productos</h2></div>
+  <div class="grid">
+
+    <div class="card">
+      <img class="pic" src="img/surgipler.jpg" alt="surgipler">
+      <div class="name">SURGIPLER<sup>®</sup></div>
+      <div class="sub">Grapadora quirúrgica de piel desechable y estéril</div>
+      <ul>
+        <li>Diseño ergonómico para grapado rápido, adaptable a distintos tamaños de mano</li>
+        <li>Cierre de piel más rápido que con suturas</li>
+        <li>Estéril, un solo uso · 35 grapas de acero inoxidable de grado médico</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img class="pic" src="img/trutie.jpg" alt="trutie">
+      <div class="name">TRUTIE<sup>®</sup></div>
+      <div class="sub">Clips de ligadura</div>
+      <ul>
+        <li>Fijación segura para una ligadura y oclusión perfectas</li>
+        <li>Moleteado único: agarre seguro y mínimo deslizamiento del tejido</li>
+        <li>Memoria cero: mínima posibilidad de apertura accidental</li>
+        <li>Compatible con RMN · titanio grado médico 1, norma ASTM F67</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img class="pic" src="img/truskin.jpg" alt="truskin">
+      <div class="name">TRUSKIN™</div>
+      <div class="sub">Guantes quirúrgicos de látex, con polvo</div>
+      <ul>
+        <li>Diseño anatómico, alta resistencia a la tracción</li>
+        <li>Polvo de almidón de maíz</li>
+        <li>Superficie microporosa para mejor agarre de instrumentos</li>
+        <li>Bajo nivel de proteínas de látex</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img class="pic" src="img/trupoly.jpg" alt="trupoly">
+      <div class="name">TRUPOLY™ PF</div>
+      <div class="sub">Guantes quirúrgicos de látex, sin polvo</div>
+      <ul>
+        <li>Excelente agarre y manejo; recubrimiento de polímero</li>
+        <li>Diseño anatómico que reduce el cansancio de la mano</li>
+        <li>Menor reacción alérgica que los guantes con polvo</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img class="pic" src="img/truloop.jpg" alt="truloop">
+      <div class="name">TRULOOP<sup>®</sup></div>
+      <div class="sub">Catgut crómico esterilizado — ligadura de bucle preanudada</div>
+      <ul>
+        <li>Tamaño 1, 50cm de longitud, con bucle y nudo corredizo en el extremo distal</li>
+        <li>Rápida y precisa: ahorra tiempo quirúrgico</li>
+        <li>Minimiza el riesgo de infección</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <img class="pic" src="img/umbilical.jpg" alt="umbilical">
+      <div class="name">UMBILICAL COTTON TAPE™</div>
+      <div class="sub">Retracción quirúrgica temporal</div>
+      <ul>
+        <li>Cinta tejida de algodón, suave y uniforme</li>
+        <li>Reduce el riesgo de daño a tejidos y heridas</li>
+        <li>Transparente (no opaca) · esterilizada por radiación</li>
+        <li>Uso en la ligadura del cordón umbilical</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<div class="pack" id="envasado">
+  <div class="pack-inner">
+    <div class="eyebrow">Capacidades de manufactura</div>
+    <h2>Envasado de última generación, con tecnología de desarrollo propio</h2>
+    <div class="pack-grid">
+      <div class="pack-card">
+        <img class="pic" src="img/trulene_cv.jpg" alt="Envase grande Trulene CV" style="height:150px;">
+        <div class="tag">Envase grande</div>
+        <h3>Trulene CV</h3>
+        <p>Diseñado para suturas cardiovasculares finas, con el fin de evitar el efecto memoria.</p>
+      </div>
+      <div class="pack-card">
+        <img class="pic" src="img/colimatic.jpg" alt="Envasado colimatic" style="height:150px;">
+        <div class="tag">Envasado colimatic</div>
+        <h3>Personalización de marca</h3>
+        <p>Capacidad de incorporar las directrices exactas de marca del cliente, privadas u OEM.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="brands">Healthium <span style="opacity:.4;font-weight:400;">/</span> iBiomed</div>
+      <p>Healthium Medtech Limited — #472-D, 13th Cross, 4th Phase, Peenya Industrial Area, Bangalore, 560 058, India.<br>
+      Tel: +91 80 4186 8198 · care@healthiummedtech.com · www.healthiummedtech.com</p>
+    </div>
+    <div>
+      <h3>Distribuidor en Guatemala</h3>
+      <p>iBiomed — Inversiones Biomédicas<br>
+      Tel: (+502) 5748-9721 · @ibiomedicas</p>
+    </div>
+  </div>
+  <div class="foot-bottom">CATÁLOGO DE PRODUCTO · CIERRE DE HERIDAS · USO INFORMATIVO PARA EQUIPO COMERCIAL</div>
+</footer>
+
+</body>
+</html>
